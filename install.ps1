@@ -13,7 +13,7 @@ $ErrorActionPreference = "Stop"
 
 $skillDir = Join-Path $env:USERPROFILE ".claude\skills"
 $src      = $PSScriptRoot
-$all      = @("ad-scripting", "vsl-scripting", "post-booking-videos")
+$all      = @("ad-scripting", "vsl-scripting", "post-booking-videos", "testimonial-mining")
 
 if ($Names -and $Names.Count -gt 0) { $wanted = $Names } else { $wanted = $all }
 
@@ -41,6 +41,7 @@ foreach ($name in $wanted) {
         "ad-scripting"        { Write-Host "  script a batch of ads" }
         "vsl-scripting"       { Write-Host "  script my VSL" }
         "post-booking-videos" { Write-Host "  script my thank you video" }
+        "testimonial-mining"  { Write-Host "  cut testimonials from my interview" }
     }
 }
 Write-Host ""

@@ -1,6 +1,6 @@
 # Scale Info skills
 
-Three Claude skills for building a paid call funnel. Each one turns a short conversation into
+Four Claude skills for building a paid call funnel. Each one turns a short conversation into
 finished, ready-to-film copy.
 
 | Skill | What it writes | Say |
@@ -8,6 +8,7 @@ finished, ready-to-film copy.
 | `ad-scripting` | A batch of top-of-funnel and retargeting ad scripts, in the right mode for where the click is going | *script a batch of ads* |
 | `vsl-scripting` | A word-for-word video sales letter, routed to B2B, B2C or webinar | *script my VSL* |
 | `post-booking-videos` | The four videos a confirmation page runs on | *script my thank you video* |
+| `testimonial-mining` | A scored clip plan cut out of a client interview transcript, plus the copy for each winner | *cut testimonials from my interview* |
 
 They pair with [funnel-skill](https://github.com/jessxdavid/funnel-skill), which builds the
 pages themselves.
@@ -30,7 +31,7 @@ git clone https://github.com/jessxdavid/scaleinfo-skills.git
 .\scaleinfo-skills\install.ps1
 ```
 
-Install one instead of all three:
+Install one instead of all four:
 
 ```bash
 bash install.sh vsl-scripting
@@ -67,6 +68,18 @@ fixing it in a two-thousand-word script takes a rewrite.
 seven required beats, the Q&A objection library, the free breakdowns, and the client results
 block. This is the page that decides both whether someone shows up and whether they arrive
 already sold.
+
+**`testimonial-mining`** takes a client interview transcript and gives back a scored table of clip
+candidates, then the assets for the winners. It runs on **one library, three outputs**: the same
+interview yields a 30–60 second retargeting ad, a proof block for the confirmation page, and an
+objection answer for the Q&A library. Most people cut one ad out of an interview and never open
+the file again.
+
+Its scoring is three tests — does the moment kill one named objection, does it stand alone, does
+it carry specific proof — and then the distinction that saves the most time: **a weak moment is
+unfixable, so discard it; a weak cut of a strong moment is fixable, so re-cut it.** It works from
+a transcript, not from video, and it will tell you an interview yielded three clips rather than
+padding the list to eight.
 
 ---
 

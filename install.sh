@@ -13,7 +13,7 @@ set -euo pipefail
 SKILL_DIR="$HOME/.claude/skills"
 SRC="$(cd "$(dirname "$0")" && pwd)"
 
-ALL=(ad-scripting vsl-scripting post-booking-videos)
+ALL=(ad-scripting vsl-scripting post-booking-videos testimonial-mining)
 
 if [ "$#" -gt 0 ]; then
   WANTED=("$@")
@@ -46,6 +46,7 @@ for name in "${WANTED[@]}"; do
     ad-scripting)        echo "  script a batch of ads" ;;
     vsl-scripting)       echo "  script my VSL" ;;
     post-booking-videos) echo "  script my thank you video" ;;
+    testimonial-mining)  echo "  cut testimonials from my interview" ;;
   esac
 done
 echo
